@@ -1,0 +1,101 @@
+.competences {
+    padding: 80px 0 0 0;
+
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .competences-header {
+            border-bottom: 1px solid #d0cfcd;
+
+            h2 {
+                margin: 0 0 5px 0;
+            }
+        }
+
+        .competences-content {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+
+
+            .competences-content-select {
+                flex: 1;
+
+                ul {
+                    display: flex;
+                    gap: 30px;
+                    flex-wrap: wrap;
+                    padding: 0;
+
+                    li {
+                        display: flex;
+                        gap: 10px;
+                        place-items: center;
+
+                        img {
+                            max-width: 50px;
+                        }
+
+                        h3 {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+
+            .competences-content-items {
+                display: flex;
+                gap: 50px;
+                flex-direction: column;
+
+                @media (min-width: 992px) {
+                    flex-direction: row;
+                }
+            }
+
+            .competences-content-item {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                background-color: #F2F3F5;
+                border-radius: 15px;
+                padding: 30px;
+
+                .competences-content-item-title {
+                    .competences-content-item-icon {
+                        color: #fff;
+                        border-radius: 15px;
+                        width: 75px;
+                        height: 75px;
+                        display: flex;
+                        background: #fe9b7a;
+                        place-content: center;
+                        place-items: center;
+                        font-size: 30px;
+                    }
+                }
+
+                .competences-content-item-description {
+                    font-size: 16px;
+                    margin: 0;
+                }
+
+                &:nth-child(2) {
+                    .competences-content-item-icon {
+                        background: #1e93ff;
+                    }
+                }
+
+                &:nth-child(3) {
+                    .competences-content-item-icon {
+                        background: #fecb14;
+                    }
+                }
+            }
+        }
+    }
+}
